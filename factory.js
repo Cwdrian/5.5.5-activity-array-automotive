@@ -1,18 +1,17 @@
 class Factory{
     constructor(location, owner){
-
         this.location = location
         this.owner = owner
+        this.vehicles = []
     }
-    createVehicle(){
-        super(vehicle)
-        return this.vehicle + " " + "vehicle"
+    createVehicle(vehicle){
+        this.vehicles.push(vehicle)
+    }
+    paintVehicle(vin, paintColor){
+        let vIndex = this.vehicles.findIndex(v => v.vin === vin)
+        this.vehicles[vIndex].paint(paintColor)
     }
     listVehicles(){
-        return this.Factory + " " + "drives"
-    }
-    paintVehicle(){
-        return this.vin + " " + "vin"
-        return this.paint + " " + "paint"
+        return this.vehicles
     }
 }

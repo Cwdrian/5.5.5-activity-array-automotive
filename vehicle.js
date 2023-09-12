@@ -1,17 +1,16 @@
-class Vehicle{
-
-    constructor(make, model, color, price, vin,){
+class Vehicle {
+    constructor(make, model, year, price, vin){
         this.make = make
         this.model = model
-        this.color = color
+        this.year = year
         this.price = price
         this.vin = vin
-    
+        this.color = undefined
     }
-    paint(paintColor) {
-            this.paint = paintColor;
+    paint(color){
+        this.color = color
+    }
+drive(){
+    return this.year + " "+ this.make + " "+ this.model+ " drives"
+    }
 }
-    drive(){
-        return this.vehicle + " " + "drives"
-    }
-    }
